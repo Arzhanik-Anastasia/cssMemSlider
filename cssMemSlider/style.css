@@ -1,0 +1,151 @@
+h1 {
+  text-align: center;
+  padding-top: 5%;
+}
+body {
+  background-color: rgba(29, 129, 99, 0.527);
+}
+.all {
+  margin: 0 auto;
+  max-width: 100vw;
+}
+#slider {
+  text-align: center;
+  top: 10px;
+  max-width: 65%;
+}
+#slider {
+  margin: 0 auto;
+}
+#slides .cont-img {
+  width: 25%;
+  float: left;
+  height: 30vw;
+}
+#text .cont-text {
+  width: 25%;
+  float: left;
+  margin-top: 50px;
+  height: 50px;
+  text-align: start;
+  font-size: 32px;
+}
+#text {
+  width: 90%;
+  /*   margin-left: 19%; */
+}
+.img1 {
+  background: url("./assets/11.jpg") center no-repeat;
+  background-size: cover;
+}
+.img2 {
+  background: url("./assets/55.jpg") center no-repeat;
+  background-size: cover;
+}
+.img3 {
+  background: url("./assets/22.jpeg") center no-repeat;
+  background-size: cover;
+}
+.img4 {
+  background: url("./assets/4.jpg") center no-repeat;
+  background-size: cover;
+}
+#slides .image {
+  width: 400%;
+  line-height: 0;
+}
+#text .text-c {
+  width: 400%;
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+#overflow {
+  width: 100%;
+  overflow: hidden;
+}
+/* div img, */
+.cont-text {
+  width: 100%;
+}
+label,
+a {
+  cursor: pointer;
+}
+.all input {
+  display: none;
+}
+#switch1:checked ~ #slides .image {
+  margin-left: 0;
+}
+#switch1:checked ~ #text .text-c {
+  margin-left: 0;
+}
+#switch2:checked ~ #slides .image {
+  margin-left: -100%;
+}
+#switch2:checked ~ #text .text-c {
+  margin-left: -100%;
+}
+#switch3:checked ~ #slides .image {
+  margin-left: -200%;
+}
+#switch3:checked ~ #text .text-c {
+  margin-left: -200%;
+}
+#switch4:checked ~ #slides .image {
+  margin-left: -300%;
+}
+#switch4:checked ~ #text .text-c {
+  margin-left: -300%;
+}
+#controls {
+  margin: -25% 0 0 0;
+  width: 100%;
+  height: 50px;
+}
+#active label {
+  border-radius: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: rgb(44, 44, 44);
+  border: 2px solid white;
+  margin: 5px;
+}
+label::after {
+  display: block;
+  content: "";
+  width: 200%;
+  height: 400%;
+  border-radius: 50%;
+  top: -30px;
+  left: -10px;
+  position: relative;
+}
+#active {
+  position: relative;
+  top: -45px;
+  text-align: end;
+}
+@media screen and (max-width: 1000px) {
+  #active {
+    text-align: center;
+    top: -90px;
+  }
+  #text .cont-text {
+    margin-top: 70px;
+  }
+}
+#active label:hover {
+  border-color: rgba(71, 241, 65, 0.856) !important;
+  background-color: rgba(57, 245, 188, 0.527);
+}
+#switch1:checked ~ #active label:nth-child(1),
+#switch2:checked ~ #active label:nth-child(2),
+#switch3:checked ~ #active label:nth-child(3),
+#switch4:checked ~ #active label:nth-child(4) {
+  border-color: black !important;
+  background-color: rgba(13, 58, 44, 0.527);
+}
+#slides .image {
+  transition: all 800ms cubic-bezier(0.77, 0, 0.175, 1);
+}

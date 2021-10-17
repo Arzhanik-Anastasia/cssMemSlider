@@ -1,8 +1,15 @@
+:root {
+  --font-size: 32px;
+  --padding: 20px;
+  --height: 50px;
+  --top: 10px;
+}
+
 h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: var(--font-size);
   text-transform: uppercase;
-  padding-top: 20px;
+  padding-top: var(--padding);
   color: rgb(3, 3, 150);
 }
 body {
@@ -14,11 +21,11 @@ body {
 }
 #slider {
   text-align: center;
-  top: 10px;
+  top: var(--top);
   max-width: 65%;
   margin: 0 auto;
   background-color: rgb(0, 59, 94);
-  padding: 20px;
+  padding: var(--padding);
 }
 
 #slides .cont-img {
@@ -29,10 +36,10 @@ body {
 #text .cont-text {
   width: 25%;
   float: left;
-  margin-top: 50px;
-  height: 50px;
+  margin-top: var(--height);
+  height: var(--height);
   text-align: start;
-  font-size: 32px;
+  font-size: var(--font-size);
 }
 #text {
   width: 85%;
@@ -102,16 +109,16 @@ a {
 #controls {
   margin: -25% 0 0 0;
   width: 100%;
-  height: 50px;
+  height: var(--height);
 }
 #active label {
-  border-radius: 10px;
+  border-radius: calc(var(--padding) / 2);
   display: inline-block;
-  width: 20px;
-  height: 20px;
+  width: var(--padding);
+  height: var(--padding);
   background: rgb(44, 44, 44);
-  border: 3px solid rgb(1, 176, 189);
-  margin: 5px;
+  border: 0.2em solid rgb(1, 176, 189);
+  margin: calc(var(--padding) / 2);
 }
 label::after {
   display: block;
@@ -119,13 +126,13 @@ label::after {
   width: 200%;
   height: 400%;
   border-radius: 50%;
-  top: -30px;
-  left: -10px;
+  top: -2rem;
+  left: -0.9rem;
   position: relative;
 }
 #active {
   position: relative;
-  top: -45px;
+  top: -3.4rem;
   text-align: end;
 }
 .cont-text {
@@ -135,10 +142,10 @@ label::after {
 @media screen and (max-width: 1000px) {
   #active {
     text-align: center;
-    top: -90px;
+    top: -6rem;
   }
   #text .cont-text {
-    margin-top: 70px;
+    margin-top: 5rem;
   }
 }
 #active label:hover {
